@@ -1,4 +1,12 @@
 quieres_sabritas_input = input ( "quieres sabrtias de limon? (si/no): ")
+if quieres_sabritas_input == "si":
+    quieres_sabritas = True
+elif quieres_sabritas_input == "no":
+    quieres_sabritas = False
+else:
+    print("tienes que decir que si on no sucio mortal")
+    quieres_sabritas = False
+
 tienes_dinero_input = input ("tienes dinero suficiente? (si/no):")
 sabritas_de_limon_input = input ("hay sabritas de limon? (si/no):")
 esta_mama_input = input ("estas con mama? (si/no):")
