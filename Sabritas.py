@@ -1,9 +1,13 @@
-quieres_sabritas = input ( "quieres sabrtias? (si/no): ")
-tienes_dinero = input ("tienes dinero suficiente? (si/no):")
-sabritas_de_limon = input ("hay sabritas de limon? (si/no):")
-esta_mama = input ("estas con mama? (si/no):")
+quieres_sabritas_input = input ( "quieres sabrtias de limon? (si/no): ")
+tienes_dinero_input = input ("tienes dinero suficiente? (si/no):")
+sabritas_de_limon_input = input ("hay sabritas de limon? (si/no):")
+esta_mama_input = input ("estas con mama? (si/no):")
 
-if quieres_sabritas == "si" and (tienes_dinero == "si"  or esta_mama == "si") and sabritas_de_limon == "si":
+quieres_sabritas = quieres_sabritas_input == "si"
+puedes_comprar = tienes_dinero_input == "si" or esta_mama_input == "si"
+hay_sabritas_limon = sabritas_de_limon_input == "si"
+
+if quieres_sabritas and puedes_comprar and hay_sabritas_limon:
     print("compra entonces")
 else:
     print ("entonces nada")
