@@ -2,13 +2,20 @@ pokemon_elegido = input("¿contra que pokemon quieres luchar (Ratata / Pidgeon /
 
 vida_charmander = 100
 vida_enemigo = 0
+ataque_pokemon = 0
 
 if pokemon_elegido == "Ratata":
     vida_enemigo = 70
-if pokemon_elegido == "Pidgeon":
+    nombre_pokemon = "Ratata"
+    ataque_pokemon = 8
+elif pokemon_elegido == "Pidgeon":
     vida_enemigo = 90
-if pokemon_elegido == "Miau":
+    nombre_pokemon = "Pidgeon"
+    ataque_pokemon = 11
+elif pokemon_elegido == "Miau":
     vida_enemigo = 130
+    nombre_pokemon = "Miau"
+    ataque_pokemon = 14
 
 while vida_charmander > 0 and vida_enemigo > 0:
     ataque_elegido = input("¿que ataque quieres usar? ( Lanzallamas / Coletazo ): ")
@@ -17,17 +24,10 @@ while vida_charmander > 0 and vida_enemigo > 0:
     if ataque_elegido == "Coletazo":
         vida_enemigo -=10
 
-    print("La vida del enemigo es {}".format(vida_enemigo))
+    print("La vida de {} es {}".format(nombre_pokemon, vida_enemigo))
 
-    if pokemon_elegido == "Ratata":
-        print("Ratata te hace 8 de daño")
-        vida_charmander -= 8
-    if pokemon_elegido == "Pidgeon":
-        print("Pidgeon te hace 11 de daño")
-        vida_charmander -= 11
-    if pokemon_elegido == "Miau":
-        print("Miau te hace 14 de daño")
-        vida_charmander -= 14
+    print("{} te hace daño de {} puntos".format(nombre_pokemon, ataque_pokemon))
+    vida_charmander -= ataque_pokemon
 
     print("La vida de Charmander es {}".format(vida_charmander))
 
