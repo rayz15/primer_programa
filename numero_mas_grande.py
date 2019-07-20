@@ -8,5 +8,10 @@ while len(numeros_usuario) < 10:
     numeros_del_usuario = ""
     print("Numero añadido")
 
-print(numeros_usuario)
+numero_grande = numeros_usuario[0]
+for numero in numeros_usuario:
+    if numero > numero_grande:
+        numero_grande = numero
+
+print("El numero mayor es {}".format(numero_grande))
 
